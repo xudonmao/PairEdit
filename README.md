@@ -49,3 +49,13 @@ cuda: 12.1
 
 # Acknowledgements
 Our code is mainly based on [Concept Slider](https://github.com/rohitgandikota/sliders). Huge thanks to the authors for their amazing work!
+
+# BibTex
+```
+@inproceedings{lu2025paiedit,
+  title={PairEdit: Learning Semantic Variations for Exemplar-based Image Editing},
+  author={Haoguang Lu, Jiacheng Chen, Zhenguo Yang, Aurele Tohokantche Gnanha, Fu Lee Wang, Qing Li, Xudong Mao},
+  booktitle={NeurIPS},
+  year={2025}
+}
+```
