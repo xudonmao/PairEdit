@@ -1,0 +1,58 @@
+device: 1
+pretrained_model_name_or_path: "black-forest-labs/FLUX.1-dev"
+
+python_name: train_image_real
+
+datasets_folder: datasets
+datasets:
+  - real_person
+
+image_ids:
+  - 610
+  - 1743
+
+source_folder: source
+target_folder: target
+
+config_name: base
+
+start_step: 0
+end_step: 27
+num_inference_steps: 28
+guidance_scale: 3.5
+
+cfg_eta: 4
+noise_scales: 
+  - 1
+
+train_iteration: 1500
+save_per_steps: 500
+train_start: 1
+train_count: 1
+train_method: full
+output_folder: "output/models/image/"
+
+# 生成部分
+semantic_lora_path: "output/models/pretrained/elf.pt"
+semantic_cfg_scale: 0.75
+
+use_trained_lora_path: 0 # if use trained lora
+trained_lora_path: ""
+
+use_prompts_file: 0 # 1 using prompts file to generate image; 0 not using prompts file
+prompts_file: 
+  - prompts-person.yaml
+
+use_random_seed: 0 # 1 use random seed; 0 not use seed
+
+output_folder_gen: "output/eval/image/"
+
+prompt: 
+  - image of a person
+
+skips: 
+  - 14
+start_seed_gen: 6666
+
+scales: 0,0.2,0.4,0.6,0.8,1.0
+count_gen: 2
